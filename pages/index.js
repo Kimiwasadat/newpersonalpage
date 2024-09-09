@@ -8,13 +8,14 @@ export default function Home({ data }) {
   }
   
   export async function getStaticProps() {
-    const data = await fetchData(); // Replace with your own data fetching logic
+    // Replace with your data fetching logic
+    const data = await fetch('https://newpersonalpage-git-main-kimiwa-sadats-projects.vercel.app').then(res => res.json());
   
     return {
       props: {
         data,
       },
-      revalidate: 60, // Revalidate every 60 seconds
+      revalidate: 60, // Revalidate the page every 60 seconds
     };
   }
   
