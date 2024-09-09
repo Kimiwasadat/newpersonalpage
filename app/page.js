@@ -180,6 +180,7 @@ const cardData4 = [
 
 ];
 
+
 export default function Home() {
   const [text, setText] = useState('');
   const [fullText, setFullText] = useState('Aspiring Software Engineer');
